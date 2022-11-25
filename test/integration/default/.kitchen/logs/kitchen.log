@@ -1,0 +1,26 @@
+E, [2022-11-24T13:24:57.742091 #18646] ERROR -- Kitchen: ------Exception-------
+E, [2022-11-24T13:24:57.742135 #18646] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2022-11-24T13:24:57.742145 #18646] ERROR -- Kitchen: Message: Kitchen YAML file /etc/ansible/roles/balancer/test/integration/default/kitchen.yml does not exist.
+E, [2022-11-24T13:24:57.742152 #18646] ERROR -- Kitchen: ----------------------
+E, [2022-11-24T13:24:57.742158 #18646] ERROR -- Kitchen: ------Backtrace-------
+E, [2022-11-24T13:24:57.742164 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/loader/yaml.rb:65:in `read'
+E, [2022-11-24T13:24:57.742170 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/config.rb:153:in `data'
+E, [2022-11-24T13:24:57.742177 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/config.rb:131:in `suites'
+E, [2022-11-24T13:24:57.742182 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/config.rb:183:in `filter_instances'
+E, [2022-11-24T13:24:57.742188 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/config.rb:142:in `build_instances'
+E, [2022-11-24T13:24:57.742194 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/config.rb:116:in `instances'
+E, [2022-11-24T13:24:57.742200 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/command.rb:109:in `filtered_instances'
+E, [2022-11-24T13:24:57.742205 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/command.rb:139:in `parse_subcommand'
+E, [2022-11-24T13:24:57.742211 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/command/list.rb:29:in `call'
+E, [2022-11-24T13:24:57.742217 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/cli.rb:52:in `perform'
+E, [2022-11-24T13:24:57.742223 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/cli.rb:120:in `list'
+E, [2022-11-24T13:24:57.742229 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+E, [2022-11-24T13:24:57.742235 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+E, [2022-11-24T13:24:57.742241 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+E, [2022-11-24T13:24:57.742246 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/thor-1.2.1/lib/thor/base.rb:485:in `start'
+E, [2022-11-24T13:24:57.742252 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/bin/kitchen:11:in `block in <top (required)>'
+E, [2022-11-24T13:24:57.742257 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/lib/kitchen/errors.rb:183:in `with_friendly_errors'
+E, [2022-11-24T13:24:57.742263 #18646] ERROR -- Kitchen: /var/lib/gems/2.7.0/gems/test-kitchen-3.4.0/bin/kitchen:11:in `<top (required)>'
+E, [2022-11-24T13:24:57.742269 #18646] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2022-11-24T13:24:57.742275 #18646] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2022-11-24T13:24:57.742280 #18646] ERROR -- Kitchen: ----End Backtrace-----
