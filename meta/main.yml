@@ -16,4 +16,4 @@ galaxy_info:
   galaxy_tags:
     - balancer
 dependencies:
-  - ../../dotfob.conf_base
+  - /etc/ansible/roles/dotfob.conf_base
