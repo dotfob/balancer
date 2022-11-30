@@ -15,5 +15,5 @@ galaxy_info:
         - 8
   galaxy_tags:
     - balancer
-dependencies:
-  - ../dotfob.conf_base
+#dependencies:
+ # - /dotfob.conf_base
