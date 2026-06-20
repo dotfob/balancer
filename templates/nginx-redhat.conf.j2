@@ -33,8 +33,8 @@ http {
   }
 
    server {
-     listen {{ ansible_enp0s8.ipv4.address }}:80;
-     server_name www.dexter.com.br dexter.com.br;
+     listen {{ balancer }}:80;
+     server_name {{ server_name }};
      location / {
        proxy_pass http://cluster;
        proxy_redirect off;

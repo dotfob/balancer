@@ -1,38 +1,63 @@
-Role Name
-=========
+balancer
+========
 
-A brief description of the role goes here.
+Ansible Role para instalação e configuração do **Nginx como Load Balancer**
+(proxy reverso) distribuindo tráfego HTTP entre dois servidores web de backend.
+
+Suporta as famílias **Debian/Ubuntu** e **RedHat/CentOS**.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+- Ansible >= 2.9
+- Acesso `root`/`become` nos hosts de destino
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Definidas em `defaults/main.yml` e sobrescrevíveis no playbook:
+
+| Variável      | Padrão                              | Descrição                              |
+|---------------|-------------------------------------|----------------------------------------|
+| `balancer`    | `127.0.0.1`                         | IP em que o Nginx escuta na porta 80   |
+| `server_name` | `www.exemplo.com.br exemplo.com.br` | `server_name` do virtual host          |
+| `webserver01` | `172.16.0.201`                      | Primeiro backend do upstream `cluster` |
+| `webserver02` | `172.16.0.202`                      | Segundo backend do upstream `cluster`  |
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+Nenhuma.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+```yaml
+- hosts: balancers
+  become: true
+  roles:
+    - role: balancer
+      balancer: 172.16.0.200
+      server_name: "www.meusite.com.br meusite.com.br"
+      webserver01: 10.0.0.11
+      webserver02: 10.0.0.12
+```
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+Testing
+-------
+
+Há testes com Test Kitchen + Docker + serverspec:
+
+```bash
+kitchen test
+```
 
 License
 -------
 
-BSD
+GPLv3
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+dotfob
