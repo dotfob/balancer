@@ -1,3 +1,10 @@
 ---
+# IP em que o load balancer (Nginx) escuta na porta 80
+balancer: 127.0.0.1
+
+# server_name publicado pelo virtual host
+server_name: "www.exemplo.com.br exemplo.com.br"
+
+# Servidores do upstream (backend) que recebem o tráfego balanceado
 webserver01: 172.16.0.201
 webserver02: 172.16.0.202

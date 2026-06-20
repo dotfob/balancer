@@ -9,7 +9,7 @@
     - Start Nginx
   tags: balancer
 
-- name: Instala servidor Ngin no RedHat/CentOS
+- name: Instala servidor Nginx no RedHat/CentOS
   when: ansible_os_family == "RedHat"
   yum:
     name: nginx
@@ -19,8 +19,7 @@
   tags: balancer
 
 - name: Inicia e ativa na inicializacao o servico nginx
-  when: ansible_os_family == "RedHat"
-  systemd:
+  service:
     name: nginx
     state: started
     enabled: true

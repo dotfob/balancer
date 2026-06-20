@@ -1,0 +1,13 @@
+# Test Kitchen
+.kitchen/
+.kitchen.local.yml
+kitchen.local.yml
+
+# Chaves SSH / segredos (nunca versionar)
+*_rsa
+*_rsa.pub
+*.pem
+*.key
+
+# Ansible
+*.retry
